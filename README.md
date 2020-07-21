@@ -4,6 +4,8 @@
 Break up the text into component pieces called "tokens". They are the <b>basic building block</b> of a document object.
 
 ## Stemming
+Defines a keyword and then find variations to find relations between them.  
+
 ## Lemmatization
 ## Stop Words
 ## Part of speech "POS"
