@@ -10,6 +10,8 @@ Defines a keyword and then find variations to find relations between them. For e
 Lemma is another word reduction approach but based on a morphological analysis of the words. For example, the lemma of "meeting" might be is "meet" or can be "meeting" depending on it is use in a sentence.
 
 ## Stop Words
+The words which appears frequently and they are not nouns, verbs or modifiers. This words do not require tagging.
+
 ## Part of speech "POS"
 ## Named Entity Recognition
 ## Feature Extraction
