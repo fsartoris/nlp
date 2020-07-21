@@ -6,13 +6,13 @@ Break up the text into component pieces called "tokens". They are the basic buil
   * Suffix: characters at the end
   * Infix: characters in between
 
-* Stemming
-* Lemmatization
-* Stop Words
-* Part of speech "POS"
-* Named Entity Recognition
-* Feature Extraction
-* Semantic Analysis
-* Topic Modelling
-* Non Negative Matrix Factorization
+## Stemming
+## Lemmatization
+## Stop Words
+## Part of speech "POS"
+## Named Entity Recognition
+## Feature Extraction
+## Semantic Analysis
+## Topic Modelling
+## Non Negative Matrix Factorization
 
