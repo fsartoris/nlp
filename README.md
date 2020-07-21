@@ -12,6 +12,9 @@ Lemma is another word reduction approach but based on a morphological analysis o
 ## Stop Words
 The words which appears frequently and they are not nouns, verbs or modifiers. This words do not require tagging.
 
+## Pattern Matching
+Defines patters to find if they exists in the document.
+
 ## Part of speech "POS"
 ## Named Entity Recognition
 ## Feature Extraction
