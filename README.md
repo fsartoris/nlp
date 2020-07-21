@@ -1,10 +1,7 @@
 # Natural Language Processing
 
 ## Tokenization
-Break up the text into component pieces called "tokens". They are the basic building block of a document object.
-  * Prefix: characters at the beginning
-  * Suffix: characters at the end
-  * Infix: characters in between
+Break up the text into component pieces called "tokens". They are the <bold>basic building block</bold> of a document object.
 
 ## Stemming
 ## Lemmatization
