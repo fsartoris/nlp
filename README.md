@@ -1,4 +1,5 @@
 # Natural Language Processing
+This repo contains examples for below points related to NLP in Python. 
 
 ## Tokenization
 Break up the text into component pieces called "tokens". They are the <b>basic building block</b> of a document object.
@@ -32,3 +33,11 @@ Classify large volumes of text by clustering documents into topics. Use LDAâ€Š-â
 
 ## Semantic Analysis
 VADER (Valence Aware Dictionary for Sentiment Reasoning) is a model to use in sentimental analysis which is sensitive to both polarity (positive or negative) and intensity of emotion. The "score" will be calculated summing the intensity of each word in the text (positive, negative, strong)
+
+# Installation using pip
+
+pip install -r requirements.txt 
+python3 -m spacy download en_core_web_sm
+
+
+
