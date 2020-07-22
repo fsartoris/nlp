@@ -15,10 +15,30 @@ The words which appears frequently and they are not nouns, verbs or modifiers. T
 ## Pattern Matching
 Defines patterns to find if they exists in the document.
 
+## Phrase Matching
+Defines patterns to find if they exists in the document.
+
 ## Part of speech "POS"
-## Named Entity Recognition
-## Feature Extraction
+The context defines the meaning of the words. Same words in different order can mean something completely different.
+
+## Named Entity Recognition (NER)
+Locate and classify named entity mentions in unstructured text into predefined categories like person names, organizations, locations, medical codes, time expressions, monetary, quantity, percentages and so on.
+
+
+
+
+
+## Topic Modelling using LDA
+Classify large volumes of text by clustering documents into topics. This is part of unsupervised learning and use LDA - Latent Dirichlet Allocation to group the words. 
+
+## Topic Modelling using Non Negative Matrix
+
+
+
 ## Semantic Analysis
+
 ## Topic Modelling
+
 ## Non Negative Matrix Factorization
+
 
