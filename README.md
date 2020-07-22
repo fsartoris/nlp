@@ -24,21 +24,11 @@ The context defines the meaning of the words. Same words in different order can 
 ## Named Entity Recognition (NER)
 Locate and classify named entity mentions in unstructured text into predefined categories like person names, organizations, locations, medical codes, time expressions, monetary, quantity, percentages and so on.
 
+## Feature Extraction
+Use SKLearn to pre-process text based on the frequency of the words.
 
-
-
-
-## Topic Modelling using LDA
-Classify large volumes of text by clustering documents into topics. This is part of unsupervised learning and use LDA - Latent Dirichlet Allocation to group the words. 
-
-## Topic Modelling using Non Negative Matrix
-
-
+## Topic Modelling using LDA (Unsupervised Learning) & Non Negative Matrix
+Classify large volumes of text by clustering documents into topics. Use LDA - Latent Dirichlet Allocation to group the words in clusters. 
 
 ## Semantic Analysis
-
-## Topic Modelling
-
-## Non Negative Matrix Factorization
-
-
+VADER (Valence Aware Dictionary for Sentiment Reasoning) is a model to use in sentimental analysis which is sensitive to both polarity (positive or negative) and intensity of emotion. The "score" will be calculated summing the intensity of each word in the text (positive, negative, strong)
