@@ -1,0 +1,6 @@
+spacy
+nltk
+feedparser
+pandas
+sklearn
+stop_words

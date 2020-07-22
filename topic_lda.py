@@ -7,6 +7,17 @@ from stop_words import get_stop_words
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 
+#create a dataframe to apply ML model
+def create_dataframe_RSS():
+    feed = feedparser.parse("https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml")
+    array_titles = []
+    for entry in feed.entries:
+        array_titles.append(entry.title)        
+        
+    return pd.DataFrame(array_titles, columns =['title'])
+        
+
+
 stop_words_customized = get_stop_words('english')
 
 #PARAMETERS:
@@ -48,16 +59,4 @@ print(topic_result[0].argmax())
 
 #add for each record the topic/index/group that belongs
 df['topic'] = topic_result.argmax(axis=1)
-
-
-#create a dataframe to apply ML model
-def create_dataframe_RSS():
-    feed = feedparser.parse("https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml")
-    array_titles = []
-    for entry in feed.entries:
-        array_titles.append(entry.title)        
-        
-    return pd.DataFrame(array_titles, columns =['title'])
-        
-
     

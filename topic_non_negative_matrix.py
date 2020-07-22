@@ -6,6 +6,16 @@ from stop_words import get_stop_words
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
 
+#create a dataframe to apply ML model
+def create_dataframe_RSS():
+    feed = feedparser.parse("https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml")
+    array_titles = []
+    for entry in feed.entries:
+        array_titles.append(entry.title)        
+        
+    return pd.DataFrame(array_titles, columns =['title'])
+
+
 #get stop words customized
 stop_words_customized = get_stop_words('english')
 
@@ -35,13 +45,3 @@ topic_res = nfm_model.transform(dtm)
 
 #assign it to the dataframe
 df['topic_cluster'] = topic_res.argmax(axis=1)
-
-
-#create a dataframe to apply ML model
-def create_dataframe_RSS():
-    feed = feedparser.parse("https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml")
-    array_titles = []
-    for entry in feed.entries:
-        array_titles.append(entry.title)        
-        
-    return pd.DataFrame(array_titles, columns =['title'])

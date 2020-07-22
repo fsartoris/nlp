@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jul 22 11:18:05 2020
-
-@author: fzar
-"""
-
 import feedparser
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -17,6 +11,24 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn import metrics
 
+#create a dataframe to apply ML model
+#get 3 RSS feed from different matter to apply the model
+def create_dataframe_RSS():
+    df_money = get_array_from_RSS('http://rss.cnn.com/rss/money_news_international.rss', 'money')
+    df_tech = get_array_from_RSS('http://rss.cnn.com/rss/edition_technology.rss', 'tech')
+    df_show = get_array_from_RSS('http://rss.cnn.com/rss/edition_entertainment.rss', 'show')
+    return pd.concat([df_money, df_tech, df_show])
+
+def get_array_from_RSS(url, topic):
+    feed = feedparser.parse(url)    
+    array_cnn = []
+    for entry in feed.entries:    
+        array_cnn.append({
+            'title': entry.title,
+            'summary': entry.summary,
+            'topic': topic           
+            });
+    return pd.DataFrame(array_cnn, columns = ['title', 'summary', 'topic'])
 
 df = create_dataframe_RSS()
 
@@ -68,23 +80,3 @@ print(metrics.accuracy_score(y_test, predictions))
 print(text_clf.predict(["Apple adquired new startup company"]))
 print(text_clf.predict(["Queen release a new film"]))
 print(text_clf.predict(["Bank of America defines a new investment foundation"]))
-
-
-#create a dataframe to apply ML model
-#get 3 RSS feed from different matter to apply the model
-def create_dataframe_RSS():
-    df_money = get_array_from_RSS('http://rss.cnn.com/rss/money_news_international.rss', 'money')
-    df_tech = get_array_from_RSS('http://rss.cnn.com/rss/edition_technology.rss', 'tech')
-    df_show = get_array_from_RSS('http://rss.cnn.com/rss/edition_entertainment.rss', 'show')
-    return pd.concat([df_money, df_tech, df_show])
-
-def get_array_from_RSS(url, topic):
-    feed = feedparser.parse(url)    
-    array_cnn = []
-    for entry in feed.entries:    
-        array_cnn.append({
-            'title': entry.title,
-            'summary': entry.summary,
-            'topic': topic           
-            });
-    return pd.DataFrame(array_cnn, columns = ['title', 'summary', 'topic'])
