@@ -38,6 +38,7 @@ VADER (Valence Aware Dictionary for Sentiment Reasoning) is a model to use in se
 # Installation using pip
 
 pip install -r requirements.txt 
+
 python3 -m spacy download en_core_web_sm
 
 
