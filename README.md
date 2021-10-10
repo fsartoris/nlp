@@ -1,5 +1,5 @@
 # Natural Language Processing
-This repo contains examples for below points related to NLP in Python. 
+This repo contains different examples for below points related to NLP in Python. 
 
 ### Tokenization
 Break up the text into component pieces called "tokens". They are the <b>basic building block</b> of a document object.
